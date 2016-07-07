@@ -9,8 +9,8 @@ The error message page is **currently only in Finnish** but we have plans for ad
 
 # Screenshots
 
-Image from terminal:
-![Generated Error output in command line with wp-cli](images/command-line-output.png =250x)
+Output from terminal:
+![Generated Error output in command line with wp-cli](images/command-line-output.png)
 
 Error Page showed to site visitors:
 ![Error page to site visitors](images/error-page-fi.png)
