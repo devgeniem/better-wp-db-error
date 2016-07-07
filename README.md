@@ -10,10 +10,11 @@ The error message page is **currently only in Finnish** but we have plans for ad
 # Screenshots
 
 Output from terminal:
-![Generated Error output in command line with wp-cli](images/command-line-output.png)
+
+<img alt="Generated Error output in command line with wp-cli" src="./images/command-line-output.png" width="500px">
 
 Error Page showed to site visitors:
-![Error page to site visitors](images/error-page-fi.png)
+<img alt="Error page to site visitors" src="./images/error-page-fi.png" width="80%">
 
 # Credits
 We used [alexphelps/server-error-pages](http://alexphelps.github.io/server-error-pages/) as base for this.
