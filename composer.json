@@ -1,0 +1,21 @@
+{
+  "name": "devgeniem/better-wp-db-error",
+  "type": "wordpress-dropin",
+  "license": "GPL-3.0+",
+  "description": "Better database error handling.",
+  "homepage": "http://geniem.com",
+  "authors": [
+    {
+      "name": "Onni Hakala",
+      "email": "onni.hakala@geniem.com",
+      "homepage": "https://github.com/onnimonni"
+    }
+  ],
+  "keywords": [
+    "wordpress","wp","database","error","page","debug"
+  ],
+  "require": {
+    "php": ">=5.6",
+    "composer/installers": "v1.0.12"
+  }
+}
