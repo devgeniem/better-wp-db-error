@@ -8,8 +8,11 @@ This `db-error.php` enhances default "Database connection error page":
 The error message page is **currently only in Finnish** but we have plans for adding other languages as well.
 
 # Screenshots
-![Generated Error output in command line with wp-cli](images/command-line-output.png)
 
+Image from terminal:
+![Generated Error output in command line with wp-cli](images/command-line-output.png =250x)
+
+Error Page showed to site visitors:
 ![Error page to site visitors](images/error-page-fi.png)
 
 # Credits
