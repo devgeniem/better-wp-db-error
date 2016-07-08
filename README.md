@@ -1,3 +1,7 @@
+![geniem-github-banner](https://cloud.githubusercontent.com/assets/5691777/14319886/9ae46166-fc1b-11e5-9630-d60aa3dc4f9e.png)
+# WP Plugin: Sanitize Accented Uploads
+[![Latest Stable Version](https://poser.pugx.org/devgeniem/better-wp-db-error/v/stable)](https://packagist.org/packages/devgeniem/better-wp-db-error) [![Total Downloads](https://poser.pugx.org/devgeniem/better-wp-db-error/downloads)](https://packagist.org/packages/devgeniem/better-wp-db-error) [![Latest Unstable Version](https://poser.pugx.org/devgeniem/better-wp-db-error/v/unstable)](https://packagist.org/packages/devgeniem/better-wp-db-error) [![License](https://poser.pugx.org/devgeniem/better-wp-db-error/license)](https://packagist.org/packages/devgeniem/better-wp-db-error)
+
 # Better db-error.php dropin for wordpress
 This `db-error.php` dropin enhances default "Database connection error page".
 
