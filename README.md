@@ -1,13 +1,31 @@
 # Better db-error.php dropin for wordpress
-This `db-error.php` enhances default "Database connection error page":
+This `db-error.php` dropin enhances default "Database connection error page".
 
 * It gives better connection error debugging for administrator when using wp-cli.
 * It shows nice error message for end users.
 * It returns `503 Service not available` status code instead of `200 OK`
+* It shows database connection debugging to frontend when `WP_DEBUG` is used.
 
+## Project Goals
 The error message page is **currently only in Finnish** but we have plans for adding other languages as well.
 
-# Screenshots
+## Installation
+You can copy `db-error.php` to your `wp-content` folder. Just plug&play.
+
+OR you can use composer so that you can automatically update it too. Put these in your composer.json:
+```json
+{
+    require: {
+        "devgeniem/better-wp-db-error": "^1.0"
+    },
+    "extra": {
+        "dropin-paths": {
+            "htdocs/wp-content/": ["type:wordpress-dropin"],
+        }
+    }
+}
+```
+## Screenshots
 
 Output from terminal:
 
@@ -16,8 +34,8 @@ Output from terminal:
 Error Page showed to site visitors:
 <img alt="Error page to site visitors (in Finnish)" src="https://cloud.githubusercontent.com/assets/5691777/16680985/dd1d7e28-44fa-11e6-9113-b6374a3835a1.png" width="80%">
 
-# Credits
+## Credits
 We used [alexphelps/server-error-pages](http://alexphelps.github.io/server-error-pages/) as base for this.
 
-# License
+## License
 GPLv3

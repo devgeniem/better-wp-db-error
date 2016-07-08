@@ -2,7 +2,7 @@
   "name": "devgeniem/better-wp-db-error",
   "type": "wordpress-dropin",
   "license": "GPL-3.0+",
-  "description": "Better database error handling.",
+  "description": "Better WordPress database error handling.",
   "homepage": "http://geniem.com",
   "authors": [
     {
@@ -16,6 +16,7 @@
   ],
   "require": {
     "php": ">=5.6",
-    "composer/installers": "v1.0.12"
+    "composer/installers": "v1.0.12",
+    "koodimonni/composer-dropin-installer": "^1.0"
   }
 }
