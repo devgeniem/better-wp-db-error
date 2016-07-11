@@ -82,6 +82,7 @@ function check_mysql_connection($host,$user,$password,$database) {
 function debug_connection() {
     // Don't show warnings here since then we would just have the same messages two times
     error_reporting(0);
+
     /*
      * Check if dns to database is resolving correctly
      */
@@ -120,14 +121,24 @@ function send_db_error_headers() {
  * Helpers to output into browser and to the command line
  * - Use colorful output to cli
  */
+
+// This outputs into commandline
 if ( defined( 'WP_CLI' ) ) {
     function error_msg($message)                { echo "\033[31mError: \033[0m{$message} \n"; }
-    function info_msg($message,  $type='Info'  ){ echo "\033[33m{$type}: \033[0m{$message} \n"; }
+    function info_msg($message,  $type='INFO'  ){ echo "\033[33m{$type}: \033[0m{$message} \n"; }
     function debug_msg($message, $type='DEBUG' ){ echo "\033[36m{$type}: \033[0m{$message} \n"; }
-} else {
+
+// This outputs to browser
+} elseif ( defined('WP_DEBUG') && WP_DEBUG ) {
     function error_msg($message)                { echo "ERROR: {$message} \n"; }
-    function info_msg($message,  $type='Info'  ){ echo "{$type}: {$message} \n"; }
+    function info_msg($message,  $type='INFO'  ){ echo "{$type}: {$message} \n"; }
     function debug_msg($message, $type='DEBUG' ){ echo "{$type}: {$message} \n"; }
+
+// This outputs to error logs
+} else {
+    function error_msg($message)                { error_log("DB ERROR: {$message}", 0); }
+    function info_msg($message,  $type='INFO'  ){ error_log("DB ERROR {$type}: {$message}", 0); }
+    function debug_msg($message, $type='DEBUG' ){ error_log("DB ERROR {$type}: {$message}", 0); }
 }
 
 // Allow better debugging if this is run from command line
@@ -167,7 +178,11 @@ if ( defined( 'WP_CLI' )  ) {
         </body>
         </html>
         <?php
-    } else { ?>
+    } else {
+
+        // Debug connection to logs
+        debug_connection();
+        ?>
         <!DOCTYPE html>
         <html lang="en">
         <head>
